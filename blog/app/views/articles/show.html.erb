@@ -1,0 +1,29 @@
+<center><h1>Exibindo cada artigo</h1>
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
+   
+  <p>
+    <strong>Text:</strong>
+    <%= @article.text %>
+  </p>
+
+  <h2>Exibindo cada comentário</h2>
+
+<!-- ################### --> 
+
+<h2>Exibindo cada comentário</h2>
+<%= render @article.comments %>
+
+<!-- ################### --> 
+<h2>Adicione Comentário:</h2>
+<%= render 'comments/form' %>
+
+
+<br>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+
+  </br>
+</center>
